@@ -1,0 +1,13 @@
+diff -urN gajim-0.14.0.1-db102f160008.orig/src/statusicon.py gajim-0.14.0.1-db102f160008/src/statusicon.py
+--- gajim-0.14.0.1-db102f160008.orig/src/statusicon.py	2011-04-13 12:45:56.108390352 +0400
++++ gajim-0.14.0.1-db102f160008/src/statusicon.py	2011-04-13 12:47:13.832766688 +0400
+@@ -123,6 +123,9 @@
+         if os.environ.get('KDE_FULL_SESSION') == 'true':
+         # detect KDE session. see #5476
+             self.statusicon_size = '32'
++        if os.environ.get('DESKTOP_SESSION') == 'gnome':
++        # detect new GNOME SHELL session.
++            self.statusicon_size = '32'
+         self.set_img()
+ 
+     def set_img(self):
