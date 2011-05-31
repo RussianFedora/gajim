@@ -2,11 +2,11 @@ Summary:	Jabber client written in PyGTK
 Name:		gajim
 %global		majorver 0.15
 Version:	0.15
-Release:	0.1.d33a952428bc.hg%{?dist}
+Release:	0.2.76858b8db934.hg%{?dist}
 License:	GPLv3
 Group:		Applications/Internet
 URL:		http://gajim.org/
-Source0:	http://gajim.org/downloads/snap/gajim-2011-04-13.tar.gz
+Source0:	http://gajim.org/downloads/snap/gajim-2011-05-31.tar.gz
 Patch0:		gajim-0.13.90-pygtk-crash-python2.7-workaround.patch
 Patch1:		gajim-gnome-shell-icon-32.patch
 BuildArch:	noarch
@@ -67,7 +67,7 @@ Whiteboard, Length Notifier, FTP Manager, Banner Tweaks, Acronyms Expander
 plugins for Gajim
 
 %prep
-%setup -q -n %{name}-0.14.0.1-d33a952428bc
+%setup -q -n %{name}-0.14.0.1-76858b8db934
 %patch0 -p1
 %patch1 -p1
 
@@ -127,6 +127,9 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 %{_datadir}/%{name}/plugins
 
 %changelog
+* Tue May 32 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 0.15-0.2.76858b8db934.hg
+- update to 20110531 snapshot
+
 * Mon Apr 13 2011 Arkady L. Shane <ashejn@yandex-team.ru> - 0.15-0.1.d33a952428bc.hg
 - icon in gnome-shell must be 32
 - update to 20110413 snapshot
